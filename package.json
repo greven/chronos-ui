@@ -1,0 +1,88 @@
+{
+  "name": "@greven/chronos-ui",
+  "version": "0.0.2",
+  "description": "Design system based React component library",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist/cjs/*",
+    "dist/esm/*"
+  ],
+  "scripts": {
+    "clean": "rimraf dist .next",
+    "dev": "next dev --port 8080",
+    "build": "npm run build:tsc && BUILD=production rollup -c",
+    "build:tsc": "tsc --noEmit false --declaration true --outDir dist/esm --declarationDir dist/esm",
+    "build:watch": "tsc -w --declaration true --outDir dist/esm --declarationDir dist/esm && BUILD=development rollup -cw",
+    "build:next": "next build",
+    "prepare": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "theme-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greven/chronos-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greven/chronos-ui/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "homepage": "https://github.com/greven/chronos-ui#readme",
+  "author": "Nuno Freire",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
+    "@popperjs/core": "^2.5.4",
+    "@reach/alert": "^0.12.1",
+    "@reach/auto-id": "^0.12.1",
+    "@reach/rect": "^0.12.1",
+    "@styled-system/core": "^5.1.2",
+    "csstype": "^2.6.9",
+    "deepmerge": "^4.2.2",
+    "memoize-one": "^5.1.1",
+    "react-transition-group": "^4.4.1",
+    "tinycolor2": "^1.4.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.4.0",
+    "@types/jest": "^26.0.16",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-transition-group": "^4.4.0",
+    "@types/tinycolor2": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "next": "^10.0.3",
+    "prettier": "^2.2.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.34.1",
+    "rollup-plugin-analyzer": "^3.3.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.1.2"
+  }
+}

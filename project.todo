@@ -1,0 +1,24 @@
+Components:
+  ☐ Add Dark mode theming to components where it makes sense (also big pass to adjust colors of dark mode)
+  ☐ Button
+    ☐ Toggle Button
+    ☐ Button Group Vertical orientation @low
+  ☐ Card
+    ☐ Tweak card design (light and dark mode)
+    ☐ Finish the CardImage with the useImage (lazy loading, fallback, etc)
+  ☐ Alert
+    ☐ Finish the Fancy alert style (mimic fast api alert design)
+  ☐ Inputs
+    ☐ Implment a modern variant where the label is built-in in the input and jumps up on focus or value (a la Material Design)
+    ☐ Add a flushed input variant with only a bottom line, also add the built in label like in the modern variant
+
+  Bugs:
+    ✔ There are multiple bugs with how images are being rendered, SSR issues but also specific issues like htmlHeight and width not being set, check: [https://github.com/chakra-ui/chakra-ui/issues/1721](Chakra-ui Issue). If this issues are not solved, maybe use a different source code for the image component (Material UI maybe)! @done(20-09-06 23:20)
+    ✔ Avatar: There is some bug when rendering, div seems to be missing @done(20-08-13 19:56)
+    ☐ Radio Input There seems to be some bugs with radio, check updates to ChakraUI radio component? Controlled works fine but can't select when uncontrolled.
+
+Archive:
+  ✔ Add Spinner to button @done(20-08-03 16:09) @project(Components)
+  ✔ Add Button Group @done(20-08-03 19:13) @project(Components)
+  ✔ Fix Inputs having repeated id (think it happens because it renders first as undefined) @high @done(20-08-10 19:38) @project(Components)
+  ✔ Responsive is not working!! Not with props or styles!! @critical @done(20-08-02 15:35) @project(Components)
