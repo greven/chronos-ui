@@ -1,4 +1,4 @@
-import { React, Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import {
   useColorMode,
   useColorModeValue,
@@ -25,7 +25,7 @@ const passwordRulesInitial = [
   { id: 5, text: 'At least one digit or punctuation character', valid: false },
 ]
 
-export default function Tests1() {
+export default function Tests2() {
   const { toggleColorMode } = useColorMode()
   const [] = useState(false)
 
